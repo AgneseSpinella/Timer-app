@@ -3,10 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 
 import Loading from './components/Loading';
-import Timer from './components/Timer';
-import Clock from './components/Clock';
 
+const Home = lazy(() => import("./pages/Home"));
 const Chrono = lazy(() => import("./pages/Chrono"));
+const Timer = lazy(() => import("./pages/Timer"));
+const Clock = lazy(() => import("./pages/Clock"));
 
 function App() {
   return (
@@ -16,7 +17,17 @@ function App() {
         <Routes>
 
             <Route
-              path='/chrono'
+              path='/'
+              element=
+              {<Suspense fallback={<Loading />}>
+                <div>
+                  <Home />
+                </div>
+              </Suspense>}>
+            </Route>
+
+            <Route
+              path='/Chrono'
               element=
               {<Suspense fallback={<Loading />}>
                 <div>
@@ -24,6 +35,30 @@ function App() {
                 </div>
               </Suspense>}>
             </Route>
+
+            <Route
+              path='/timer'
+              element=
+              {<Suspense fallback={<Loading />}>
+                <div>
+                  <Timer />
+                </div>
+              </Suspense>}>
+            </Route>
+
+            <Route
+              path='/clock'
+              element=
+              {<Suspense fallback={<Loading />}>
+                <div>
+                  <Clock />
+                </div>
+              </Suspense>}>
+            </Route>
+ 
+
+
+
           </Routes>
         </div>
 

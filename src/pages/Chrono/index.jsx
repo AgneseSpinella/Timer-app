@@ -1,6 +1,6 @@
 const Chrono = ( ) => {
     return(
-        <h2>Chronometer</h2>
+        <h2>Cronometro</h2>
     )
 }
 
