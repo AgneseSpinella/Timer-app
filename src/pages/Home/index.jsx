@@ -4,9 +4,17 @@ const Home = ( ) => {
     return(
         <div>
             <h2>Ecco la home :)</h2>
-                <Link to="/timer">Timer</Link>
-                <Link to="/clock">Orologio</Link>
-                <Link to="/chrono">Cronometro</Link>
+                <ul>
+                    <li>
+                        <Link to="/timer">Timer</Link>
+                    </li>
+                    <li>
+                        <Link to="/clock">Orologio</Link>
+                    </li>
+                    <li>
+                        <Link to="/chrono">Cronometro</Link>
+                    </li>
+                </ul>
         </div>
     )
 }

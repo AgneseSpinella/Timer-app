@@ -3,11 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 
 import Loading from './components/Loading';
+import Clock from 'react-clock/dist/umd/Clock';
 
 const Home = lazy(() => import("./pages/Home"));
 const Chrono = lazy(() => import("./pages/Chrono"));
 const Timer = lazy(() => import("./pages/Timer"));
-const Clock = lazy(() => import("./pages/Clock"));
+const MyTime = lazy(() => import("./pages/Clock"));
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
               element=
               {<Suspense fallback={<Loading />}>
                 <div>
-                  <Clock />
+                  <MyTime />
                 </div>
               </Suspense>}>
             </Route>

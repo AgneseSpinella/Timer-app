@@ -1,7 +1,24 @@
-const Clock = ( ) => {
-    return(
-        <h2>Clock</h2>
-    )
-}
+import React from 'react';
+import ReactClock from '@uiw/react-clock';
+ import { useTime } from "react-timer-hook"
 
-export default Clock
+  function MyTime() {
+    const {
+      seconds,
+      minutes,
+      hours,
+      ampm,
+    } = useTime({ format: '12-hour'});
+  
+    return (
+      <div style={{textAlign: 'center'}}>
+      <p>Clocks</p>
+       <ReactClock/>
+        <div style={{fontSize: '100px'}}>
+          <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span><span>{ampm}</span>
+        </div>
+      </div>
+    );
+  }
+
+export default MyTime
