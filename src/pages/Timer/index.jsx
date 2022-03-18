@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Layout from "../../components/Layouts";
 
 const Timer = ( ) => {
 
@@ -53,6 +54,7 @@ const Timer = ( ) => {
 }
     return(
         <div>
+        <Layout/>
             <h2>Timer</h2>
             <p>{hours} : {minutes} : {seconds} </p>
             <button onClick={() => handleChange("addHours")}>&#8679; </button>
