@@ -63,6 +63,7 @@ const Timer = ( ) => {
             <button onClick={() => handleChange("subSec")}>DOWNSec</button>
             <button onClick={() => setStart(true)}>Start</button>
             <button onClick={() => setStart(false)}>Pause</button>
+            <button onClick={() => {setTime(0);setStart(false)}}>Restart</button>
         </div>
     )
 }
