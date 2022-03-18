@@ -55,14 +55,14 @@ const Timer = ( ) => {
         <div>
             <h2>Timer</h2>
             <p>{hours} : {minutes} : {seconds} </p>
-            <button onClick={() => handleChange("addHours")}>UPhours</button>
-            <button onClick={() => handleChange("subHours")}>DOWNhours</button>
-            <button onClick={() => handleChange("addMin")}>UPMin</button>
-            <button onClick={() => handleChange("subMin")}>DOWNMin</button>
-            <button onClick={() => handleChange("addSec")}>UPSec</button>
-            <button onClick={() => handleChange("subSec")}>DOWNSec</button>
-            <button onClick={() => setStart(true)}>Start</button>
-            <button onClick={() => setStart(false)}>Pause</button>
+            <button onClick={() => handleChange("addHours")}>&#8679; </button>
+            <button onClick={() => handleChange("subHours")}>&#8681; h</button>
+            <button onClick={() => handleChange("addMin")}>&#8679;</button>
+            <button onClick={() => handleChange("subMin")}>&#8681; m</button>
+            <button onClick={() => handleChange("addSec")}>&#8679;</button>
+            <button onClick={() => handleChange("subSec")}>&#8681; s</button>
+            <button onClick={() => setStart(true)}> /Start / </button>
+            <button onClick={() => setStart(false)}> Pause / </button>
             <button onClick={() => {setTime(0);setStart(false)}}>Restart</button>
         </div>
     )
