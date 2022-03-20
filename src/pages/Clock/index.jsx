@@ -9,11 +9,14 @@ import DigitalClock from '../../components/DigitalClock';
    
     return (
       
-      <div style={{textAlign: 'center'}}>
+      <div>
       <Layout/>
+        <div>
+          <AnalogClock/>
+        </div>
 
-      <AnalogClock/>
-      <DigitalClock/>
+          <DigitalClock/>
+
       </div>
      
     );

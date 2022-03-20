@@ -4,6 +4,8 @@ import ReactClock from '@uiw/react-clock';
 
 export default function AnalogClock() {
     return (
-        <ReactClock/>
+        <div class="ml-80">
+            <ReactClock/>
+        </div>
     )
 }

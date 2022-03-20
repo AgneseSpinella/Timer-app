@@ -15,12 +15,14 @@ const Chrono = ( ) => {
             }, 10)
         } if (!start) {
             interval = setInterval(() => {
-                if (time > 0 || time ==0 || setStart(true)) {
+                if (time > 0 || time == 0 ) {
                     setTime(prevTime => prevTime+10)
+                    
                 }
             }, 10)
         }else {
             clearInterval(interval);
+            
         }
         return () => {
             clearInterval(interval)
@@ -33,11 +35,11 @@ const Chrono = ( ) => {
     return(
         <div>
             <Layout/>
-            <h2>Cronometro</h2>
-            <p>{hours} : {minutes} : {seconds} </p>
-            <button onClick={() => setStart(false)}> Start / </button>
-            <button onClick={() => setStart(true)}> Pause / </button>
-            <button onClick={() => {setTime(0);setStart(true)}}>Restart</button>
+            <h2 class="text-xl mb-2">Cronometro</h2>
+            <p class="text-3xl mb-5">{hours} : {minutes} : {seconds} </p>
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => setStart(false)}> Start  </button>
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => setStart(true)}> Pause  </button>
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => {setTime(0);setStart(true)}}>Restart</button>
         </div>
     )
 }

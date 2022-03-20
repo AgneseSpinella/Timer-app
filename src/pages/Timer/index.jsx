@@ -55,17 +55,19 @@ const Timer = ( ) => {
     return(
         <div>
         <Layout/>
-            <h2>Timer</h2>
-            <p>{hours} : {minutes} : {seconds} </p>
-            <button onClick={() => handleChange("addHours")}>&#8679; </button>
-            <button onClick={() => handleChange("subHours")}>&#8681; h</button>
-            <button onClick={() => handleChange("addMin")}>&#8679;</button>
-            <button onClick={() => handleChange("subMin")}>&#8681; m</button>
-            <button onClick={() => handleChange("addSec")}>&#8679;</button>
-            <button onClick={() => handleChange("subSec")}>&#8681; s</button>
-            <button onClick={() => setStart(true)}> /Start / </button>
-            <button onClick={() => setStart(false)}> Pause / </button>
-            <button onClick={() => {setTime(0);setStart(false)}}>Restart</button>
+            <h1 class="text-xl mb-2">Timer</h1>
+            <p class="text-3xl mb-5">{hours} : {minutes} : {seconds} </p>
+            <button class="border-2 p-1 border-blue-300 rounded-lg" onClick={() => handleChange("addHours")}>&#8679; +H</button>
+            <button class="border-2 p-1 border-red-300 rounded-lg mr-3" onClick={() => handleChange("subHours")}>&#8681; -H</button>
+            <button class="border-2 p-1 border-blue-300 rounded-lg" onClick={() => handleChange("addMin")}>&#8679; +M</button>
+            <button class="border-2 p-1 border-red-300 rounded-lg mr-3" onClick={() => handleChange("subMin")}>&#8681; -M</button>
+            <button class="border-2 p-1 border-blue-300 rounded-lg" onClick={() => handleChange("addSec")}>&#8679; +S</button>
+            <button class="border-2 p-1 border-red-300 rounded-lg mr-3" onClick={() => handleChange("subSec")}>&#8681; -S</button>
+            <div class="mt-2">
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => setStart(true)}> Start  </button>
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => setStart(false)}> Pause  </button>
+            <button class="border-2 p-2 border-yellow-500 bg-yellow-400 rounded mr-2" onClick={() => {setTime(0);setStart(false)}}>Restart</button>
+            </div>
         </div>
     )
 }

@@ -12,12 +12,11 @@ export default function DigitalClock() {
    
     return (
       
-      <div style={{textAlign: 'center'}}>
-      <p>Clocks</p>
-       <div style={{fontSize: '100px'}}>
+
+       <div class="float-right -mt-20 mr-80 text-3xl">
           <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span><span>{ampm}</span>
         </div> 
-      </div>
+
      
     );
   }

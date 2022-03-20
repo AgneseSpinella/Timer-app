@@ -3,9 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 
 import Loading from './components/Loading';
-import Clock from 'react-clock/dist/umd/Clock';
 
-const Home = lazy(() => import("./pages/Home"));
+
 const Chrono = lazy(() => import("./pages/Chrono"));
 const Timer = lazy(() => import("./pages/Timer"));
 const MyTime = lazy(() => import("./pages/Clock"));
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className="App">
 
-        <div class="flex flex-col w-100 h-100 border-solid border-4 border-indigo-300">
+        <div class=" bg-stone-200 flex-col w-100 h-80 border-solid border-4 border-neutral-500">
         <Routes>
 
             <Route
@@ -22,7 +21,7 @@ function App() {
               element=
               {<Suspense fallback={<Loading />}>
                 <div>
-                  <Home />
+                  <MyTime />
                 </div>
               </Suspense>}>
             </Route>
@@ -46,18 +45,6 @@ function App() {
                 </div>
               </Suspense>}>
             </Route>
-
-            <Route
-              path='/clock'
-              element=
-              {<Suspense fallback={<Loading />}>
-                <div>
-                  <MyTime />
-                </div>
-              </Suspense>}>
-            </Route>
- 
-
 
 
           </Routes>
